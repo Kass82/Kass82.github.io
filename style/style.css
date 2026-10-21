@@ -1,22 +1,51 @@
-.layout {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
+:root{
+  --background-color: #111519;
+  --color1: #242D35;
+  --color2: #607F96;
+  --color3: #A7C7D9;
+  --color4: #E3E9EC;
+
+  
 }
 
-.container1 {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+
+body{
+  background-color: var(--background-color);
+  color: var(--color4);
+  font-family: "Barlow", system-ui, sans-serif;  margin: 0;
+  padding: 10px;
 }
 
-.sideMenu {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 260px;
-  padding: 20px;
-  background-color: #9fabe7;
 
+/* Folder Styles */
+.folder {
+  position: relative;
+  margin-top: 35px;
+  min-width: 30vw;
+  max-width: 700px;
+  padding: 24px;
+  background: #242D36;
+  border: 1px solid #607F96;
+  border-radius: 0; 
+}
+
+.folder h3 {
+  margin-top: 3px;
+  margin-left: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color4);
+}
+.folder::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: -1px; 
+  width: 145px;
+  height: 25px;
+  background: #242D36;
+  border: 1px solid #607F96;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
 }
