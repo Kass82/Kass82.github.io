@@ -1,41 +1,56 @@
 :root{
   --background-color: #111519;
+  --bg-color: #202D36;
+
   --color1: #242D35;
   --color2: #607F96;
   --color3: #A7C7D9;
   --color4: #E3E9EC;
 
+  --border: #607F96;
   
 }
 
-
+* {
+  box-sizing: border-box;
+}
 
 body{
   background-color: var(--background-color);
   color: var(--color4);
   font-family: "Barlow", system-ui, sans-serif;  margin: 0;
-  padding: 10px;
+  padding: clamp(16px, 4vw, 32px);
 }
 
+/* elements */
+a {
+  color: var(--color2);
+  text-decoration: none;
+}
 
 /* Folder Styles */
 .folder {
   position: relative;
   margin-top: 35px;
-  min-width: 30vw;
-  max-width: 700px;
   padding: 24px;
-  background: #242D36;
-  border: 1px solid #607F96;
-  border-radius: 0; 
+  background: var(--color2);
+  color: var(--color1);
+  border: 1px solid var(--border);
+  border-radius: 0 8px 0 0;
 }
-
 .folder h3 {
   margin-top: 3px;
   margin-left: 0;
   font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--color4);
+}
+.folder-divider {
+  border: none;
+  height: 1px;
+  background: var(--color2);
+  margin: 16px 0;
+  opacity: 0.7;
 }
 .folder::before {
   content: "";
@@ -44,8 +59,36 @@ body{
   left: -1px; 
   width: 145px;
   height: 25px;
-  background: #242D36;
-  border: 1px solid #607F96;
+  background: var(--color2);
+  border: 1px solid var(--border);
   border-bottom: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 9px 9px 0 0;
+}
+.file-panel {
+  position: relative;
+  padding: 24px;
+  margin-top: 30px;
+  border: 1px solid var(--color2);
+  background: var(--bg-color);
+  color: var(--color3);
+}
+.file-panel h1,h2,h3{
+  color:var(--color4);
+}
+
+.footer{
+  font-size: 14px;
+  text-align: center;
+}
+
+.side-panel{
+  width: 500px;
+  background-color: var(--border);
+}
+
+/* Containers */
+.layout{
+  display: flex;
+  min-height: 100vh;
+  padding: 24px;
 }
