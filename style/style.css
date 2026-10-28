@@ -92,3 +92,42 @@ a {
   min-height: 100vh;
   padding: 24px;
 }
+
+/* Button */
+/* Primary action */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+
+  background: var(--bg-color);
+  color: var(--color2);
+
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--background);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
